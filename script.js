@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         assistitoInfo.innerHTML = '';
         if (user) {
             assistitoInfo.innerHTML = `<div class="assistito-name">${user.cognome} ${user.nome}</div><div id="cf-barcode-container" class="barcode-container"><svg id="codice-fiscale-barcode" class="barcode"></svg></div>`;
-            try { JsBarcode("#codice-fiscale-barcode", user.codiceFiscale, { format: "CODE39", height: 90, displayValue: true, fontSize: 22 }); } catch (e) { console.error("Errore barcode CF:", e); }
+            try { JsBarcode("#codice-fiscale-barcode", user.codiceFiscale, { format: "CODE39", height: 90, displayValue: true, fontSize: 60 }); } catch (e) { console.error("Errore barcode CF:", e); }
             activeRicette = user.nre.filter(nre => !nre.suspended);
             currentRicettaIndex = 0;
         } else {
