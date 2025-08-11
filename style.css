@@ -134,7 +134,7 @@ button:hover { opacity: 0.9; }
 .barcode { width: 100%; height: auto; box-sizing: border-box; }
 
 /* ---- REGOLE LARGHEZZA BARCODE ---- */
-#cf-barcode-container { max-width: 70mm; }
+#cf-barcode-container { max-width: 80mm; hight: 5mm }
 #nre-barcode-container-1,
 #nre-barcode-container-2 {
     max-width: none;
