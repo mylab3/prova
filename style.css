@@ -134,9 +134,11 @@ button:hover { opacity: 0.9; }
 .barcode { width: 100%; height: auto; box-sizing: border-box; }
 
 /* ---- REGOLE LARGHEZZA BARCODE ---- */
-#cf-barcode-container { max-width: 70mm; }
-#nre-barcode-container-1 { max-width: 35mm; }
-#nre-barcode-container-2 { max-width: 70mm; }
+#cf-barcode-container,
+#nre-barcode-container-1,
+#nre-barcode-container-2 {
+    max-width: none;
+}
 
 .ricetta-info-header { margin-bottom: 20px; }
 .info-ricetta { font-size: 1.2em; font-weight: bold; margin: 10px 0; }
