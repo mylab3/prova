@@ -129,13 +129,9 @@ button:hover { opacity: 0.9; }
 
 .barcode-container {
     margin: 15px 0;
-    text-align: center;
+    text-align: left;
 }
-.barcode {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+.barcode { width: 100%; height: auto; box-sizing: border-box; }
 
 /* ---- REGOLE LARGHEZZA BARCODE ---- */
 #cf-barcode-container { max-width: 80mm; hight: 40mm }
