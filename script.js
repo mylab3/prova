@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         assistitoInfo.innerHTML = '';
         if (user) {
             assistitoInfo.innerHTML = `<div class="assistito-name">${user.cognome} ${user.nome}</div><div id="cf-barcode-container" class="barcode-container"><svg id="codice-fiscale-barcode" class="barcode"></svg></div>`;
-            try { JsBarcode("#codice-fiscale-barcode", user.codiceFiscale, { format: "CODE39", height: 100, displayValue: true, fontSize: 22 }); } catch (e) { console.error("Errore barcode CF:", e); }
+            try { JsBarcode("#codice-fiscale-barcode", user.codiceFiscale, { format: "CODE39", height: 100, displayValue: true, fontSize: 24 }); } catch (e) { console.error("Errore barcode CF:", e); }
             activeRicette = user.nre.filter(nre => !nre.suspended);
             currentRicettaIndex = 0;
         } else {
@@ -150,8 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const ricettaIndexText = activeRicette.length === 1 ? 'Ricetta unica' : `Ricetta n° ${currentRicettaIndex + 1}`;
             ricetteContainer.innerHTML = `<div class="ricetta-info-header"><p class="info-ricetta info-ricetta-main">${ricettaCountText}</p><p class="info-ricetta">${ricettaIndexText}</p></div><div id="nre-barcode-container-1" class="barcode-container"><svg id="nre-barcode-1" class="barcode"></svg></div><div id="nre-barcode-container-2" class="barcode-container"><svg id="nre-barcode-2" class="barcode"></svg></div>`;
             try {
-                JsBarcode("#nre-barcode-1", ricetta.code.substring(0, 5), { format: "CODE39", height: 100, displayValue: true, fontSize: 22 });
-                JsBarcode("#nre-barcode-2", ricetta.code.substring(5), { format: "CODE39", height: 100, displayValue: true, fontSize: 22 });
+                JsBarcode("#nre-barcode-1", ricetta.code.substring(0, 5), { format: "CODE39", height: 100, displayValue: true, fontSize: 24 });
+                JsBarcode("#nre-barcode-2", ricetta.code.substring(5), { format: "CODE39", height: 100, displayValue: true, fontSize: 24 });
             } catch (e) { console.error("Errore barcode NRE:", e); }
         } else { ricetteContainer.innerHTML = '<p class="info-ricetta info-ricetta-main">NESSUNA RICETTA DA VISUALIZZARE</p>'; }
     }
